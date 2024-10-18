@@ -11,11 +11,11 @@ def assign_ingredient(name, quantity, ingredients, servings):
     # Curr_ingredient would be, for instance "850.0 g"
     if existing_ingredient:
         existing_ingredient = existing_ingredient.split()
-        ingredients[name] = (str(round(float(existing_ingredient[QUANTITY]) + float(quantity) * servings, DECIMAL_PLACES))) + " g"
+        ingredients[name] = (str(round(float(existing_ingredient[QUANTITY]) + float(quantity) * servings, DECIMAL_PLACES)))
     # Otherwise, make a new entry for the ingredient w/
     # name <name> and quantity <quantity>
     else:
-        ingredients[name] = str(round(float(quantity) * servings, DECIMAL_PLACES)) + " g"
+        ingredients[name] = str(round(float(quantity) * servings, DECIMAL_PLACES))
     return ingredients
 
 def add_ingredient(ingredients, ingredient, servings):

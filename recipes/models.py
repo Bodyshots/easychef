@@ -40,7 +40,7 @@ class Recipe(models.Model):
     cookingtimetag = models.CharField(max_length=7, choices=CookingTimeTags.choices, blank=True)
     cuisine = models.CharField(max_length=7, choices=Cuisines.choices, blank=True)
     diets = MultiSelectField(choices=Diets.choices, blank=True, max_length=5, max_choices=2)
-    favourited = models.PositiveIntegerField(default=0, editable=False)
+    favourited = models.PositiveIntegerField(default=0, editable=True)
 
     prep_time = models.TimeField()  # Replace w/ TimeField(?)
     cook_time = models.TimeField()  # Replace w/ TimeField(?)
@@ -73,7 +73,7 @@ class RecipeIngredient(models.Model):
                                       default=1)
 
     def __str__(self):
-        return f"({self.id}) {self.quantity} {self.name} g"
+        return f"({self.id}) {self.quantity} {self.name}"
 
 class RecipeImage(models.Model):
     recipe = models.ForeignKey(to=Recipe, on_delete=CASCADE, related_name='images')

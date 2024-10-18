@@ -26,7 +26,7 @@ function RecipeCard(item) {
                 <h3 className='card_text'>{recipe.name.length > 15 ? recipe.name.substring(0, 15) + '...' : recipe.name}</h3>
                 <span className="recipecat card_text">Cooking time: {recipe.cook_time}</span>
             </div>
-            <p className='card_text' id='card_desc'>{recipe_desc.length > 25 ? recipe_desc + '...'
+            <p className='card_text' id='card_desc'>{recipe_desc.length > 25 ? recipe_desc.substring(0, 25) + '...'
                                                     : recipe_desc.length === 0
                                                     ? 'No description' 
                                                     : recipe_desc}</p>
