@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState } from "react";
-import ShopListItem from '..';
 
 import '../../shop_lst.css';
 import '../shopitem.css';
@@ -42,7 +41,6 @@ function AddableShopLstItem() {
                             id="add_shoplstrecipe"
                         />
                     </Form>
-                    {ShopListItem('test')}
                 </Modal.Body>
                 <Modal.Footer id='addshoprecipe_modal_footer'>
                     <Button variant="primary" onClick={togglePopup} className='shop_lst_btn'>
